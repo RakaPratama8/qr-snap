@@ -18,7 +18,9 @@ enum Popup {
         label.maximumNumberOfLines = 3
         label.lineBreakMode = .byTruncatingMiddle
         label.preferredMaxLayoutWidth = 420
-        let textSize = label.intrinsicContentSize
+        // intrinsicContentSize comes out a few points too narrow and triggers the "..." truncation.
+        let cell = label.cell!.cellSize(forBounds: NSRect(x: 0, y: 0, width: 420, height: CGFloat.greatestFiniteMagnitude))
+        let textSize = NSSize(width: ceil(cell.width), height: ceil(cell.height))
 
         let pad: CGFloat = 16
         let size = NSSize(width: textSize.width + 2 * pad, height: textSize.height + 2 * pad)
