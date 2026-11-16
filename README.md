@@ -6,7 +6,7 @@ Native Swift, Apple frameworks only (`Cocoa`, `Carbon.HIToolbox`, `ScreenCapture
 
 ## Usage
 
-1. Press **Ctrl+Option+Command+Q** in any app.
+1. Press **Ctrl+Option+Command+P** in any app.
 2. Drag over the QR code. Press **Esc** (or drag less than 10 pt) to cancel.
 3. The decoded text is copied to the clipboard and shown in a popup at the top of the screen. Click the popup or wait about 4 seconds to dismiss it.
 4. If the text is an `http` or `https` URL, it also opens in the default browser.
